@@ -18,8 +18,25 @@ class MainActivity : AppCompatActivity() {
 
             val myIntent = Intent(this, OtherActivity::class.java)
             startActivity(myIntent)
-
         }
 
+        
+        sendMessageBtn.setOnClickListener { 
+            
+//            먼저 전달 할 내용을 변수에 담자
+            val inputMessage = messageEdt.text.toString()
+            
+//            저장한 변수를 들고 메시지 화면으로 이동
+            val myIntent = Intent(this, ViewMessageActivity::class.java)
+            
+//            myIntent에 데이터 추가, ""안은 이름표고 뒤에 , inputMessage가 데이터
+            myIntent.putExtra("이름표임", inputMessage)
+            
+            startActivity(myIntent)
+            
+            
+        }
+        
+        
     }
 }
