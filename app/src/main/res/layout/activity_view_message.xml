@@ -11,6 +11,7 @@
 
 
     <TextView
+        android:id="@+id/messageTxt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="메인에서 보내준 메시지 출력하는 텍스트뷰"
