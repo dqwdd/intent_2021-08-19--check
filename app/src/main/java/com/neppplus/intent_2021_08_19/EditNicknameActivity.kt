@@ -14,22 +14,18 @@ class EditNicknameActivity : AppCompatActivity() {
 
         okBtn.setOnClickListener {
 
-//            입력할 닉네임 저장
+//            입력한 닉네임 저장
             val inputNickname = nicknameEdt.text.toString()
 
 //            이전 화면으로 데이터를 들고 복귀
             val resultIntent = Intent()
-            resultIntent.putExtra("nicknamedata", inputNickname)
-
-
+            resultIntent.putExtra("nick", inputNickname)
 
 //            OK버튼을 눌렀다는 명시를 해줘야 함 + 돌아갈 데이터 세팅도 같이 해줘야 함
             setResult( Activity.RESULT_OK, resultIntent )
             finish()
 
         }
-
-
 
 
     }

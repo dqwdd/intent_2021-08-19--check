@@ -1,5 +1,6 @@
 package com.neppplus.intent_2021_08_19
 
+import android.app.Activity
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -54,6 +55,23 @@ class MainActivity : AppCompatActivity() {
             
         }
         
-        
     }
+
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+        super.onActivityResult(requestCode, resultCode, data)
+
+        if (requestCode == REQ_FOR_NICKNAME) {
+            if (resultCode == Activity.RESULT_OK) {
+//                2가지 if문 통과 == data 뽑아내자
+//                data 보면 ? 처리 되있자나 그래서 밑에 data에도 ? 처리 해야 함
+                val newNick = data?.getStringExtra("nick")
+
+                nicknameTxt.text = newNick
+
+            }
+        }
+
+    }
+
+
 }
