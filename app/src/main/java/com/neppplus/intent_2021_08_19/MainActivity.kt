@@ -6,9 +6,25 @@ import android.os.Bundle
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
+    
+    val REQ_FOR_NICKNAME = 1000
+    val REQ_FOR_PHONE = 1001
+    
+    
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
+
+        editNicknameBtn.setOnClickListener { 
+            
+            val myIntent = Intent(this, EditNicknameActivity::class.java)
+            startActivityForResult(myIntent, 1000)
+//            1000=걍 구별할 숫자임, 암거나 가능
+//            숫자에 REQ_FOR_NICKNAME이라 써도 가능
+//            그러면 알아보기 쉽다
+            
+        }
 
         moveToOtherBtn.setOnClickListener {
 
