@@ -23,6 +23,7 @@ class MainActivity : AppCompatActivity() {
 //            1000=걍 구별할 숫자임, 암거나 가능
 //            숫자에 REQ_FOR_NICKNAME이라 써도 가능
 //            그러면 알아보기 쉽다
+//            startActivityForResult(myIntent, REQ_FOR_NICKNAME)이렇게
             
         }
 
