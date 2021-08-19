@@ -8,10 +8,22 @@
     android:orientation="vertical"
     android:padding="20dp">
 
+
     <Button
         android:id="@+id/moveToOtherBtn"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="다른 회면으로 이동"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="다른 화면에 전달할 내용 입력"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="입력한 내용 전달하기"/>
+
 
 </LinearLayout>
